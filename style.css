@@ -8,19 +8,32 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: bisque;
+    background-color: #505168;
+    /* opacity: 50%; */
 }
 
 .container {
-    background-color: white;
+    background-color: #FFFCFF;
     padding: 2rem;
     border-radius: 1rem;
     min-height: 45vh;
-    width: 40vh;
+    width: 50vh;
+    box-shadow: 
+        3px 3px 8px rgba(0, 0, 0, 0.2),  /* Shadow for depth */
+        -3px -3px 8px rgba(255, 255, 255, 0.7); /* Highlight for emboss effect */
+
+   
 }
+
+.container::before {
+    box-shadow: 
+        inset 2px 2px 4px rgba(0, 0, 0, 0.2),  /* Inner shadow for depth */
+        inset -2px -2px 4px rgba(255, 255, 255, 0.7); /* Inner highlight for emboss effect */
+ }  
 
 form p {
     padding-bottom: 0.5rem;
+    font-size: 1.25rem;
 }
 
 form {
@@ -34,11 +47,15 @@ form select,button,input {
     border-radius: 0.75rem;
 }
 
+form select {
+    background-color: #FFFCFF;
+}
 form input {
     border: 1px solid lightgray;
     font-size: 1rem;
     height: 3rem;
-    padding-left: 0.5rem ;
+    padding-left: 0.5rem;
+    background-color: #FFFCFF;
 }
 
 .dropdown {
@@ -72,11 +89,13 @@ form input {
 
 .msg {
     margin: 2rem 0 2rem 0;
+    font-size: 1.25rem;
 }
 
 form button {
     height: 3rem;
-    background-color: aliceblue;
+    background-color: #505168;
+    color: #FFFCFF;
     font-size: 1.15rem;
     cursor: pointer;
 }
